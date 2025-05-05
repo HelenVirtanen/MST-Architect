@@ -48,32 +48,36 @@ body {
 }
 
 .container {
+  max-width: 1920px;
   margin: 0 auto 100px;
-  display: flex;
-  justify-content: space-between;
   background-color: #222;
 }
 
-/* Hero */
 .container_inner {
-  max-width: 1597px;
   padding: 0 162px;
 }
 
 /* Header */
-.header {
-  display: flex;
-  align-items: center;
-  padding: 30px 0;
-  margin-bottom: 64px;
+.header-container {
+    position: relative;
 }
 
-.header.fixed {
-  background-color: #222;
+.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 10;
+  max-width: 1920px;
+  display: flex;
+  align-items: center;
+  padding: 30px 162px;
+  margin-bottom: 0;
+  background-color: transparent;
+}
+
+.header.scroll {
+  background-color: #222;
   transform: translate3d(0, 0, 0);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -104,19 +108,58 @@ body {
   gap: 29px;
 }
 
-/* Intro */
-.intro__title {
+.menu__link {
+    position: relative;
+    transition: color .1s linear;
+}
+
+.menu__link:hover,
+.menu__link_active {
+    color: #EFCFAD;
+}
+
+.menu__link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #EFCFAD;
+    position: absolute;
+    opacity: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .2s linear;
+}
+
+.menu__link:hover::after, 
+.menu__link_active::after {
+    opacity: 1;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 162px;
+}
+
+.hero__content {
+    padding-top: 320px;
+    margin-bottom: 50px;
+}
+
+.hero__title {
   font-family: Prata;
   font-size: 80px;
   font-weight: 400;
   max-width: 537px;
   width: 100%;
-  padding-top: 140px;
   margin-bottom: 18px;
   line-height: 1.2;
 }
 
-.intro__subtitle {
+.hero__subtitle {
   font-size: 50px;
   font-weight: 400;
   margin-bottom: 48px;
@@ -149,6 +192,11 @@ body {
   margin-right: 15px;
 }
 
+.statistic-list__item:hover .prata__accent-font{
+    color: #EFCFAD;
+}
+
+
 .hero__image {
   display: block;
   width: 763px;
@@ -169,6 +217,13 @@ body {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color .2s linear, transform .2s linear;
+}
+
+.button:hover,
+.button:active {
+    background-color: #EFCFAD;
+    transform: scale(1.02);
 }
 
 .button_hero {
@@ -193,6 +248,13 @@ body {
   font-weight: 400;
   line-height: 1.5;
 }
+
+.button_submit:hover,
+.button_submit:active {
+    background-color: #0a4257;
+    transform: scale(1);
+}
+
 .button_footer {
   font-size: 20px;
   padding: 28px 52px;
@@ -204,6 +266,8 @@ body {
 /* Description */
 .description {
   max-width: 100%;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   height: 724px;
 }
@@ -228,10 +292,9 @@ body {
   flex: 0 0 718px;
   padding: 53px;
   padding-bottom: 0;
-}
-
-.description__list {
-  margin-bottom: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .description__list-item {
@@ -242,6 +305,7 @@ body {
   padding: 35px 0;
   font-size: 24px;
   line-height: 1.2;
+  transition: color .2s linear;
 }
 
 .description__list-item:first-child {
@@ -259,9 +323,14 @@ body {
   height: 47px;
 }
 
+.description__list-item:hover {
+    color: #EFCFAD;
+}
+
 /* Contact us */
 .contacts {
   position: relative;
+  max-width: 1597px;
   background-color: #fff;
   color: #38535d;
   border-radius: 30px;
@@ -382,10 +451,28 @@ body {
   padding-top: 20px;
 }
 
+.footer__social-link {
+    transition: transform .2s linear;
+  }
+
+.footer__social-link:hover,
+.footer__social-link:active {
+    transform: scale(1.25);
+}
+
 .copyright,
 .privacy-policy,
 .terms {
   font-size: 20px;
+  transition: all .2s linear;
+}
+
+.privacy-policy:hover,
+.terms:hover,
+.privacy-policy:active,
+.terms:active {
+    color: #fff;
+    transform: scale(1.025);
 }
 
 .privacy-policy {
@@ -405,11 +492,11 @@ body {
     padding: 0 80px;
   }
 
-  .intro__title {
+  .hero__title {
     font-size: 64px;
   }
 
-  .intro__subtitle {
+  .hero__subtitle {
     font-size: 40px;
   }
 
@@ -529,12 +616,12 @@ body {
     justify-content: center;
   }
 
-  .intro__title {
+  .hero__title {
     font-size: 48px;
     padding-top: 70px;
   }
 
-  .intro__subtitle {
+  .hero__subtitle {
     font-size: 32px;
   }
 
@@ -640,11 +727,11 @@ body {
     padding: 0 20px;
   }
 
-  .intro__title {
+  .hero__title {
     font-size: 36px;
   }
 
-  .intro__subtitle {
+  .hero__subtitle {
     font-size: 24px;
   }
 

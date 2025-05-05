@@ -8,15 +8,12 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Hero -->
-    <div class="container">
-      <div class="container_inner">
-        <header class="header">
+        <header class="header container">
           <a class="logo header__logo" href="#0"> LOREM </a>
           <nav class="menu">
             <ul class="menu__list menu__list_header">
               <li class="menu__list-item">
-                <a href="#0" class="menu__link menu__link_active"
+                <a href="#0" class="menu__link"
                   >consectetur</a
                 >
               </li>
@@ -28,11 +25,13 @@
               </li>
             </ul>
           </nav>
-        </header>
-        <section class="intro">
-          <div class="intro__content">
-            <h1 class="intro__title">Lorem ipsum dolor sit amet</h1>
-            <h2 class="intro__subtitle">sed do eiusmod tempor </h2>
+    </header>
+    <main>
+        <!-- Hero -->
+        <section class="container hero">
+          <div class="hero__content">
+            <h1 class="hero__title">Lorem ipsum dolor sit amet</h1>
+            <h2 class="hero__subtitle">sed do eiusmod tempor </h2>
             <ul class="statistic-list">
               <li class="statistic-list__item">
                 do&nbsp;<span class="prata__accent-font">$10 000 </span>
@@ -49,13 +48,11 @@
             </ul>
             <button class="button button_hero">order</button>
           </div>
+          <div class="hero__image">
+      </div>
         </section>
-      </div>
-      <div class="hero__image">
-      </div>
+      
       <!-- ./hero -->
-    </div>
-    <!--./ container -->
 
     <!-- Description -->
     <section class="container description">
@@ -94,7 +91,7 @@
             <button type="submit" class="button button_submit">Submit form</button>
         </form>
      </section><!-- ./contacts-->
-
+    </main>
      <!-- Footer -->
      <footer class="footer">
         <div class="menu menu_footer">
@@ -126,13 +123,14 @@
                 <a class="footer__social-link" href="/"><img src="./icons/telegram.svg" width="32" height="32"></a>
                 <a class="footer__social-link" href="/"><img src="./icons/youtube.svg" width="32" height="32"></a>
             </div>
-            <p class="privacy-policy">Privacy policy</p>
+            <div class="privacy-policy"><a href="">Privacy policy</a></div>
             </div>
             <div class="footer__column">
                 <button class="button button_footer">Order</button>
-                <p class="terms">Terms of use</p>
+                <div class="terms"><a href="">Terms of use</a></div>
             </div>
         </div>
      </footer>
+     <script src="./js/script.js"></script>
   </body>
 </html>
