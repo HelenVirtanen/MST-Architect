@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Prata;
+    src: url(./Prata-Regular.woff) format('woff'),
+    url(./Prata-Regular.woff) format('ttf');
+    font-weight: normal;
+    font-display: swap;
+}
