@@ -1,18 +1,12 @@
 "use strict";
 
 const header = document.querySelector(".header");
-const headerH = header ? header.offsetHeight : 0;
-
-console.log(header.offsetHeight);
+const headerHeight = header.offsetHeight;
 
 /* Fixed header while scrolling */
 document.addEventListener("DOMContentLoaded", () => {
-  const checkScroll = (scrollOffset) => {
-    if (scrollOffset >= headerH) {
-      header.classList.add("scroll");
-    } else {
-      header.classList.remove("scroll");
-    }
+  const checkScroll = (offset) => {
+    header.classList.toggle("fixed", offset >= headerHeight);
   };
 
   let scrollOffset = window.pageYOffset;
