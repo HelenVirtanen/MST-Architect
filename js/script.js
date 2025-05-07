@@ -28,4 +28,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu = document.getElementById("menu");
     if (menu) menu.classList.toggle("active");
   });
+
+  /* Scroll lower than fixed header */
+  document.querySelectorAll('a[href^="#"]').forEach((anchor, index) => {
+    anchor.addEventListener("click", function (event) {
+      event.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      let additionalOffset = 0;
+
+      if (index === 0) {
+        additionalOffset = headerHeight;
+      }
+
+      window.scrollTo({
+        top: targetElement.offsetTop - headerHeight + additionalOffset
+      });
+    });
+  });
 });
