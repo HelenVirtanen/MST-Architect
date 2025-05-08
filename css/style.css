@@ -924,6 +924,30 @@ body {
     background-image: none;
   }
 
+  .nav-toggle {
+    width: 35px;
+    top: 37px;
+    right: 25px;
+  }
+
+  .nav-toggle__item,
+  .nav-toggle__item::before,
+  .nav-toggle__item::after {
+    height: 4px;
+  }
+
+  .nav-toggle.active .nav-toggle__item::before {
+    transform: rotate(-45deg) translateX(0px);
+  }
+
+  .nav-toggle.active .nav-toggle__item::after {
+    transform: rotate(45deg) translateX(0px);
+  }
+
+  .menu {
+    padding-top: 0;
+  }
+
   .hero__content {
     margin-bottom: 30px;
     padding: 0 30px;
