@@ -724,6 +724,7 @@ body {
     text-align: center;
     margin-bottom: 0;
     padding: 23px 80px;
+    background-color: #222;
   }
 
   .header__logo {
