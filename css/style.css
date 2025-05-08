@@ -103,6 +103,7 @@ body {
   letter-spacing: 0.04em;
   line-height: 1.5;
   text-transform: uppercase;
+  flex-wrap: wrap;
 }
 
 .menu__list_header {
@@ -521,6 +522,7 @@ body {
 
 .footer__logo {
   padding-top: 15px;
+  max-width: 220px;
 }
 
 .footer__social-links-list {
@@ -684,11 +686,16 @@ body {
     font-size: 18px;
   }
 
+  .footer__logo {
+    padding-top: 0;
+  }
+
   .footer__social-links-list {
     column-gap: 20px;
     flex-wrap: wrap;
     max-width: 165px;
     row-gap: 15px;
+    padding-top: 0;
   }
 
   .footer__social-link img {
@@ -1130,6 +1137,6 @@ body {
 
   .button_footer {
     font-size: 14px;
-    padding: 10px 25px;
+    padding: 20px 25px;
   }
 }
