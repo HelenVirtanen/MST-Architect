@@ -1,6 +1,7 @@
 # Лендинг Virtanen Atria 🏛 🏘
 
 [Репозиторий в GitHub](https://github.com/HelenVirtanen/virtanen-atria)
+
 [Размещение на GitHub Pages](https://helenvirtanen.github.io/virtanen-atria/)
 
 ## 📖 Описание проекта: 
