@@ -3,7 +3,6 @@
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
 
-
 document.addEventListener("DOMContentLoaded", () => {
   /* Fixed header while scrolling */
   const checkScroll = (offset) => {
@@ -43,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       window.scrollTo({
-        top: targetElement.offsetTop - headerHeight + additionalOffset
+        top: targetElement.offsetTop - headerHeight + additionalOffset,
       });
     });
   });
