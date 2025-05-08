@@ -1,4 +1,4 @@
-# Лендинг Virtanen Atria 🏛 🏘
+# Лендинг Virtanen Atria 🏛
 
 [Репозиторий в GitHub](https://github.com/HelenVirtanen/virtanen-atria)
 
