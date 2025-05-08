@@ -7,7 +7,7 @@ const headerHeight = header.offsetHeight;
 document.addEventListener("DOMContentLoaded", () => {
   /* Fixed header while scrolling */
   const checkScroll = (offset) => {
-    header.classList.toggle("fixed", offset >= headerHeight);
+    header.classList.toggle("fixed", offset > 0);
   };
 
   let scrollOffset = window.pageYOffset;
