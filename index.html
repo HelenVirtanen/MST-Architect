@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-        <header class="header container">
+    <header class="header container">
           <a class="logo header__logo" href="#home" aria-label="Virtanen Atria homepage"> Virtanen Atria </a>
           <nav class="menu" id="menu">
             <ul class="menu__list menu__list_header">
@@ -29,8 +29,9 @@
             <span class="nav-toggle__item">Menu</span>
           </button>
     </header>
+
     <main>
-        <!-- Hero -->
+      <!-- Hero -->
         <section class="container hero" id="properties">
           <div class="hero__content">
             <h1 class="hero__title">Find the Perfect Commercial Space</h1>
@@ -49,15 +50,16 @@
             </ul>
             <button class="button button_hero" aria-label="Order commercial space">order</button>
           </div>
-          <div class="hero__image">
-      </div>
-        </section>
-      
-      <!-- ./hero -->
+          <div class="hero__image-container">
+            <img class="hero__image" alt="Atria Center Main Building" src="../images/banner-intro.jpg">
+          </div>
+        </section><!-- ./hero -->
 
-    <!-- Description -->
-    <section class="container description" id="services">
-      <div class="description__image description__image_left"></div>
+      <!-- Description -->
+      <section class="container description" id="services">
+      <div class="description__image-container description__image-container_left">
+        <img class="description__image description__image_left" src="../images/banner-description-1.jpg">
+      </div>
       <div class="description__content">
       <ul class="description__list">
         <li class="description__list-item">
@@ -75,11 +77,13 @@
       </ul>
       <button class="button button_description" aria-label="Learn more about our services">Learn More</button>
     </div>
-      <div class="description__image description__image_right"></div>
-    </section><!-- /.description -->
+      <div class="description__image-container description__image-container_right">
+        <img class="description__image description__image_right" src="../images/banner-description-2.jpg">
+      </div>
+      </section><!-- /.description -->
 
-    <!-- Contact us -->
-     <section class="container contacts" id="contacts">
+      <!-- Contact us -->
+      <section class="container contacts" id="contacts">
         <div class="contacts__inner">
         <form class="contacts__form">
             <h2 class="contacts__title">
@@ -93,10 +97,11 @@
             <button type="submit" class="button button_submit" aria-label="Submit contact form">Submit form</button>
         </form>
     </div>
-     </section><!-- ./contacts-->
+      </section><!-- ./contacts-->
     </main>
-     <!-- Footer -->
-     <footer class="footer">
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="menu menu_footer">
             <ul class="menu__list menu__list_footer">
                 <li class="menu__list-item">
@@ -133,7 +138,7 @@
                 <div class="terms"><a href="#">Terms of use</a></div>
             </div>
         </div>
-     </footer>
-     <script src="./js/script.js"></script>
+    </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>
