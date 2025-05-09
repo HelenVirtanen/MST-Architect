@@ -212,6 +212,7 @@ body {
 
 .hero__content {
   padding-top: 320px;
+  padding-right: 30px;
   margin-bottom: 50px;
   max-width: 55%;
 }
@@ -262,14 +263,16 @@ body {
   color: #efcfad;
 }
 
-.hero__image {
-  display: block;
+.hero__image-container {
   width: 763px;
   height: 1009px;
-  background-image: url(../images/banner-intro.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+}
+.hero__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Buttons */
@@ -345,24 +348,27 @@ body {
   margin-bottom: 0;
 }
 
-.description__image {
+.description__image-container {
   flex: 0 0 auto;
   height: 724px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.description__image_left {
+.description__image-container_left {
   width: 32.4%;
   max-width: 622px;
-  background-image: url(../images/banner-description-1.jpg);
 }
 
-.description__image_right {
+.description__image-container_right {
   width: 30.2%;
   max-width: 580px;
   background-image: url(../images/banner-description-2.jpg);
+}
+
+.description__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .description__content {
@@ -574,12 +580,12 @@ body {
     margin-right: 80px;
   }
 
-  .hero__image {
+  .hero__image-container {
     width: 50%;
   }
 
-  .description__image_left,
-  .description__image_right {
+  .description__image-container_left,
+  .description__image-container_right {
     flex-basis: 30%;
   }
 
@@ -609,7 +615,7 @@ body {
     font-size: 40px;
   }
 
-  .hero__image {
+  .hero__image-container {
     height: 800px;
     align-self: end;
   }
@@ -627,8 +633,8 @@ body {
     height: auto;
   }
 
-  .description__image_left,
-  .description__image_right {
+  .description__image-container_left,
+  .description__image-container_right {
     flex-basis: 27%;
   }
 
@@ -710,8 +716,8 @@ body {
     padding-top: 200px;
   }
 
-  .hero__image {
-    height: 600px;
+  .hero__image-container {
+    height: 700px;
     align-self: center;
   }
 
@@ -779,11 +785,15 @@ body {
     padding: 0;
   }
 
-  .hero__image {
+  .hero__image-container {
     width: 100%;
-    height: 400px;
+    height: 700px;
     order: -1;
-    background-position: center;
+    margin-bottom: 40px;
+  }
+
+  .hero__image {
+    object-position: 50% 35%;
   }
 
   .hero__content {
@@ -801,11 +811,12 @@ body {
 
   .hero__title {
     font-size: 48px;
-    padding-top: 70px;
+    text-align: center;
   }
 
   .hero__subtitle {
     font-size: 32px;
+    text-align: center;
   }
 
   .button_hero {
@@ -825,15 +836,18 @@ body {
     margin-bottom: 0;
   }
 
-  .description__image_left {
+  .description__image-container_left {
     max-width: 768px;
     width: 100%;
     flex-basis: auto;
-    background-position: bottom;
-    height: 300px;
+    height: 400px;
   }
 
-  .description__image_right {
+  .description__image_left {
+    object-position: bottom;
+  }
+
+  .description__image-container_right {
     display: none;
   }
 
@@ -847,7 +861,6 @@ body {
   }
 
   .description__list-item {
-    font-size: 20px;
     padding: 20px 0;
     justify-content: flex-start;
     align-items: center;
@@ -960,16 +973,23 @@ body {
 
   .hero__content {
     margin-bottom: 30px;
-    padding: 0 30px;
+    padding: 0 20px;
   }
 
   .hero__title {
     font-size: 36px;
-    padding-top: 50px;
   }
 
   .hero__subtitle {
     font-size: 24px;
+  }
+
+  .hero__image-container {
+    height: 400px;
+  }
+
+  .hero__image {
+    object-position: center;
   }
 
   .statistic-list__item {
@@ -998,20 +1018,20 @@ body {
     margin-bottom: 10px;
   }
 
-  .description__image_left,
-  .description__image_right {
+  .description__image-container_left,
+  .description__image-container_right {
+    display: block;
     flex-basis: auto;
     width: 100%;
     height: 200px;
   }
 
   .description__image_left {
-    background-position: top;
+    object-position: top;
   }
 
   .description__image_right {
-    background-position: bottom;
-    display: block;
+    object-position: bottom;
   }
 
   .description__list-item {
