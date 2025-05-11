@@ -10,7 +10,7 @@
   <body>
     <header class="header container">
           <a class="logo header__logo" href="#home" aria-label="Virtanen Atria homepage"> Virtanen Atria </a>
-          <nav class="menu" id="menu">
+          <nav class="menu" id="menu" role="menu">
             <ul class="menu__list menu__list_header">
               <li class="menu__list-item">
                 <a href="#properties" class="menu__link" aria-label="Go to properties section"
@@ -89,7 +89,9 @@
                 Get in Touch<br />with Our Experts
             </h2>
             <fieldset class="form__personal-data">
+              <label for="name" class="visually-hidden">Name</label>
             <input type="text" placeholder="Name" class="input-text input__name" id="name"></input>
+            <label for="email" class="visually-hidden">Email</label>
             <input type="email" placeholder="Email" class="input-text input__email" id="email"></input>
         </fieldset>
             <label class="label__checkbox"><input type="checkbox" class="input__checkbox visually-hidden" aria-label="Accept privacy policy"><span class="pseudo-checkbox"></span>I accept Privacy policy</label>
